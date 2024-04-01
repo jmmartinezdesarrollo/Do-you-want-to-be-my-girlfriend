@@ -1,0 +1,30 @@
+ol {
+  list-style: none !important;
+  counter-reset: li;
+  padding-left: 0;
+}
+
+ol li {
+  position: relative;
+  counter-increment: li;
+  padding-left: 10px;
+}
+
+ol li::before {
+  content: counter(li);
+  position: absolute;
+  left: -15px;
+  color: #ff2644;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}
+
+ol li:nth-child(n+10)::before {
+  content: counter(li);
+  position: absolute;
+  left: -20px;
+  color: #ff2644;
+  font-weight: 600;
+  font-style: normal;
+}
